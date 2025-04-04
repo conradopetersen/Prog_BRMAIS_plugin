@@ -1,6 +1,6 @@
 # Catalog Prog. BRASIL MAIS - SCCON/Planet
 
-Plugin QGIS para acesso a imagens dos satélites da empresa Planet Labs e aos alertas de detecção de mudança (desmatamento e afins), vinculados ao Programa BRASIL MAIS, do Ministério da Justiça e Segurança Pública.
+Plugin QGIS para acesso a imagens dos satélites da empresa Planet Labs e aos alertas de detecção de mudança (desmatamento e afins), vinculados ao Programa BRASIL MAIS (https://plataforma-pf.sccon.com.br), do Ministério da Justiça e Segurança Pública.
 
 ## Funcionalidades
 
