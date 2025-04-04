@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlanetPluginDialogBase</class>
+ <widget class="QDialog" name="PlanetPluginDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Catalog Prog. Brasil Mais - SCCON/Planet</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="apiTab">
+      <attribute name="title">
+       <string>API Key</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Insira sua Planet API Key:</string>
+         </property>
+        </widget>
+       </item>
+        <item>
+        <layout class="QHBoxLayout" name="apiKeyLayout">
+            <item>
+            <widget class="QLineEdit" name="apiKeyLineEdit">
+                <property name="echoMode">
+                <enum>QLineEdit::Password</enum>
+                </property>
+                <property name="placeholderText">
+                <string>Insira sua API Key da Planet Labs</string>
+                </property>
+            </widget>
+            </item>
+            <item>
+            <widget class="QCheckBox" name="registerCheckBox">
+                <property name="text">
+                <string>Register</string>
+                </property>
+            </widget>
+            </item>
+        </layout>
+        </item>
+       <item>
+        <layout class="QHBoxLayout" name="apiKeyButtonsLayout">
+         <item>
+          <widget class="QPushButton" name="validateButton">
+           <property name="text">
+            <string>Validar API Key</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="clearApiKeyButton">
+           <property name="text">
+            <string>Limpar chave salva</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="monthlyTab">
+      <attribute name="title">
+       <string>Mosaicos Mensais</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Selecione o período para os mosaicos mensais:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="dateRangeLayout">
+         <item>
+          <widget class="QLabel" name="monthlyStartLabel">
+           <property name="text">
+            <string>Data inicial:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="monthlyStartDateEdit">
+           <property name="displayFormat">
+            <string>MM/yyyy</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="monthlyEndLabel">
+           <property name="text">
+            <string>Data final (opcional):</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="monthlyEndDateEdit">
+           <property name="displayFormat">
+            <string>MM/yyyy</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="endDateCheckBox">
+         <property name="text">
+          <string>Usar data final (desmarque para carregar até o último mosaico disponível)</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="loadMonthlyButton">
+         <property name="text">
+          <string>Carregar Mosaicos Mensais</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="dailyTab">
+      <attribute name="title">
+       <string>Imagens Diárias</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Área de interesse:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLineEdit" name="bboxLineEdit">
+           <property name="placeholderText">
+            <string>min_lon,min_lat,max_lon,max_lat</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="currentExtentButton">
+           <property name="text">
+            <string>Usar Extensão Atual</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Data inicial:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="dailyStartDateEdit"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Data final:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="dailyEndDateEdit"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>Cobertura de nuvens:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="dailyCloudComboBox"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="loadDailyButton">
+         <property name="text">
+          <string>Pesquisar Imagens</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="resultsListWidget">
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    <widget class="QWidget" name="ndviTab">
+    <attribute name="title">
+    <string>Índices Espectrais</string>
+    </attribute>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+        <widget class="QLabel" name="label_8">
+        <property name="text">
+        <string>Selecione o índice e o período para visualização:</string>
+        </property>
+        </widget>
+    </item>
+    <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_ndvi">
+        <item>
+        <widget class="QLabel" name="indexLabel">
+        <property name="text">
+            <string>Índice:</string>
+        </property>
+        </widget>
+        </item>
+        <item>
+        <widget class="QComboBox" name="indexComboBox"/>
+        </item>
+        </layout>
+    </item>
+    <item>
+        <layout class="QHBoxLayout" name="indexDateRangeLayout">
+        <item>
+        <widget class="QLabel" name="indexStartLabel">
+        <property name="text">
+            <string>Data inicial:</string>
+        </property>
+        </widget>
+        </item>
+        <item>
+        <widget class="QDateEdit" name="indexStartDateEdit">
+        <property name="displayFormat">
+            <string>MM/yyyy</string>
+        </property>
+        </widget>
+        </item>
+        <item>
+        <widget class="QLabel" name="indexEndLabel">
+        <property name="text">
+            <string>Data final:</string>
+        </property>
+        </widget>
+        </item>
+        <item>
+        <widget class="QDateEdit" name="indexEndDateEdit">
+        <property name="displayFormat">
+            <string>MM/yyyy</string>
+        </property>
+        </widget>
+        </item>
+        </layout>
+    </item>
+    <item>
+        <widget class="QCheckBox" name="indexEndDateCheckBox">
+        <property name="text">
+        <string>Usar data final (desmarque para carregar apenas um mês)</string>
+        </property>
+        <property name="checked">
+        <bool>true</bool>
+        </property>
+        </widget>
+    </item>
+    <item>
+        <widget class="QPushButton" name="loadNdviButton">
+        <property name="text">
+        <string>Carregar Índices Espectrais</string>
+        </property>
+        </widget>
+    </item>
+    <item>
+        <spacer name="verticalSpacer_3">
+        <property name="orientation">
+        <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+        <size>
+        <width>20</width>
+        <height>40</height>
+        </size>
+        </property>
+        </spacer>
+    </item>
+    </layout>
+    </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QProgressBar" name="progressBar">
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="button_box">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>button_box</sender>
+   <signal>accepted()</signal>
+   <receiver>PlanetPluginDialogBase</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_box</sender>
+   <signal>rejected()</signal>
+   <receiver>PlanetPluginDialogBase</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

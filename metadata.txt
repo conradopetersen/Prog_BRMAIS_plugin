@@ -1,0 +1,30 @@
+[general]
+name=Catalog Prog. BRASIL MAIS - SCCON/Planet
+qgisMinimumVersion=3.0
+description=Plugin criado com o intuito de facilitar o acesso às imagens dos satélites da empresa Planet Labs e aos alertas de detecção de mudança (desmatamento e afins), vinculados ao Programa BRASIL MAIS, do Ministério da Justiça e Segurança Pública, no QGIS.
+version=1.0
+author=conrado.cbp
+email=cbpetersen6@hotmail.com
+
+about=Este plugin permite que os usuários com acesso à Plataforma do Programa BRASIL MAIS (https://plataforma-pf.sccon.com.br) carreguem diretamente no QGIS imagens dos satélites da empresa Planet Labs, incluindo mosaicos mensais, imagens diárias e mosaicos com índices espectrais (NDVI, NDWI, MSAVI2 etc.).
+
+changelog=1.0 - Versão inicial
+
+# Tags são palavras-chave para categorizar o plugin
+tags=planet labs,satellite,remote sensing,imagery
+
+homepage=https://github.com/seuusuario/Prog_BRMAIS_plugin
+repository=https://github.com/seuusuario/Prog_BRMAIS_plugin
+tracker=https://github.com/seuusuario/Prog_BRMAIS_plugin/issues
+
+# Categoria no menu do QGIS
+category=Plugins
+
+# Tipo de recursos
+icon=icon.png
+
+# experimental flag
+experimental=True
+
+# deprecated flag
+deprecated=False
